@@ -1,5 +1,9 @@
-Steps to run on a new laptop:
+There are 2 ways to check output :
+1.on live website that has option to see using web terminal or ui
+  https://aashsih-trading-bot.hf.space -> open this link to run directly on web which is hosted on Hugging face using public space via docker
+  copy paste the above link directly
 
+2.download this as zip and follow the below steps
   # 1. Install Python 3.11+ (from python.org — check "Add to PATH")
       After python is installed  run the below command to install libs
   #       pip install requests python-dotenv  <!-- this installs both request and python-dotenv -->
@@ -17,6 +21,9 @@ Steps to run on a new laptop:
 
 trading_bot/
 ## 📁 Project Structure
+
+to run in terminal run python cli.py
+to run in web(UI) run python dashboard.py
 
 ```
 trading_bot/
