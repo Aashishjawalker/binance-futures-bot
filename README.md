@@ -16,17 +16,22 @@ Steps to run on a new laptop:
   #   BINANCE_TESTNET_API_SECRET=your_api_secret_here
 
 trading_bot/
-├── dashboard.py          ← Web based UI
-├── cli.py                ← Terminal based UI
-├── requirements.txt      ← pip install this
-├── .env                  ← your API keys ( shared ) can be expired after the time
-├── bot/                  ← Actual code files
-│   ├── client.py         
-│   ├── portfolio.py      
-│   |── logging_config.py
-|   ├── orders.py         
-│   └── validators.py 
-└── ui/                   ← UI code for web
-    ├── index.html        
-    ├── style.css
-    └── app.js
+## 📁 Project Structure
+
+```
+trading_bot/
+├── app.py              ← Main entry point (Landing + Terminal server)
+├── dashboard.py        ← Dashboard API server
+├── cli.py              ← CLI-based trading interface
+├── bot/                ← Core trading logic
+│   ├── client.py         Binance API client
+│   ├── orders.py         Order placement logic
+│   ├── portfolio.py      Portfolio tracking
+│   ├── validators.py     Input validation
+│   └── logging_config.py Logging setup
+├── ui/                 ← Frontend files
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+└── logs/               ← Log files
+```
