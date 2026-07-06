@@ -1,5 +1,5 @@
 There are 2 ways to check output :
-1.on live website that has option to see using web terminal or ui
+1.on live website that has option to see using web terminal or ui (no need to download any files just open the link)
   https://aashsih-trading-bot.hf.space -> open this link to run directly on web which is hosted on Hugging face using public space via docker
   copy paste the above link directly
 
