@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Binance Futures Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toast" class="toast"></div>
+
+<h1>Binance Futures Testnet <span id="status">loading...</span></h1>
+
+<div class="tabs" id="tabs">
+  <button class="active" data-tab="overview">Overview</button>
+  <button data-tab="trade">Trade</button>
+  <button data-tab="positions">Positions</button>
+  <button data-tab="openorders">Open Orders</button>
+  <button data-tab="orders">History</button>
+</div>
+
+<div id="overview" class="tab active"><div class="loading">Loading...</div></div>
+
+<div id="trade" class="tab">
+  <div class="trade-grid">
+    <div class="trade-form">
+      <h3>Place Order</h3>
+      <div class="form-row">
+        <label>Symbol</label>
+        <input id="t-symbol" value="BTCUSDT">
+      </div>
+      <div class="form-row">
+        <label>Side</label>
+        <div class="side-group" id="t-side-group">
+          <button class="buy active" data-side="BUY">BUY</button>
+          <button class="sell" data-side="SELL">SELL</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>Type</label>
+        <select id="t-type">
+          <option value="MARKET">MARKET</option>
+          <option value="LIMIT">LIMIT</option>
+          <option value="STOP">STOP</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>Quantity</label>
+        <input id="t-qty" placeholder="e.g. 0.002">
+      </div>
+      <div class="form-row field-hidden" id="t-price-row">
+        <label>Price</label>
+        <input id="t-price" placeholder="Required for LIMIT">
+      </div>
+      <div class="form-row field-hidden" id="t-stop-row">
+        <label>Stop Price</label>
+        <input id="t-stop" placeholder="Required for STOP">
+      </div>
+      <button class="submit buy" id="t-submit">Place BUY Order</button>
+    </div>
+    <div class="trade-form">
+      <h3>Quick Info</h3>
+      <div id="t-quick" class="loading">Select a symbol to preview</div>
+    </div>
+  </div>
+</div>
+
+<div id="positions" class="tab"><div class="loading">Loading...</div></div>
+<div id="openorders" class="tab"><div class="loading">Loading...</div></div>
+<div id="orders" class="tab"><div class="loading">Loading...</div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
